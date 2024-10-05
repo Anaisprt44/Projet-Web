@@ -1,0 +1,688 @@
+@font-face {
+    font-family: 'Kalam-Regular';
+    src: url('Kalam-Regular.ttf') format('truetype'); 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Kalam-Regular';
+    margin: 0;
+    background-image: url("fond_ecran.jpg");
+    text-align: center;
+    background-position: center;
+
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+button:hover{
+     transform: scale(1.05);
+     transition: transform 0.3s ease;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.chat-link {
+    position: relative;
+}
+
+#chat {
+    position: absolute;
+    top: -50%; /* Place l'image à 50% de la hauteur du conteneur parent */
+    right: 60px; /* Ajustez la position horizontale pour placer l'image à droite du mot "Accueil" */
+    transform: translateY(-50%);
+    z-index: 2; /* Assurez-vous que l'image est au-dessus des autres éléments */
+}
+
+h1 {  
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+    font-size: 100px;    
+}
+
+h2{
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+
+.menuBloc {
+    
+    background-color: rgb(201, 163, 137);
+
+    width: 220px;
+    height: 40px;
+    font-family: 'Kalam-Regular';
+    font-size: 130%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    
+}
+
+.menu img{
+    height: 100px;
+}
+
+#button-acceueil {  
+    font-family: 'Kalam-Regular'; 
+   
+    height: 60px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+    font-size: 200%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(201, 163, 137);
+    margin-bottom: 2%;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuBloc {
+        font-size: 12px; /* Réduisez la taille de la police */
+        padding: 8px 16px; /* Réduisez le rembourrage */
+    }
+    .menu img {
+        margin-bottom: 10px; /* Ajoutez un peu d'espace sous le logo */
+    }
+}
+
+
+
+/* Page galerie-infos */
+.galerie-infos {
+  
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50px;
+    display: flex;
+    background-color: rgb(201, 163, 137);
+    text-align: left;
+    font-size: 20px;
+}
+
+.bloc-galerie-infos{   
+    margin: 20px;    
+    overflow: scroll;
+    max-height: 400px;   
+}
+
+.galerie-infos-livre img{
+    width: 300px;
+    height: auto;
+    border-radius: 50px;
+}
+
+.grid-item:hover .zoom {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.boutique {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 5%;
+}
+
+#afficherLivre{
+    width: 90%;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-family: 'Kalam-Regular'; 
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    margin: 0px;
+}
+
+.mesEmpurntsUtil {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 163, 137);
+    border-radius: 25px;   
+    font-family: 'Kalam-Regular'; 
+    margin-bottom: 5%;
+}
+
+
+.gestionLivre-centre{
+    display: flex;
+    justify-content: center;      
+}
+
+.galerie-gestionLivres{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 163, 137);
+    border-radius: 25px;   
+    font-family: 'Kalam-Regular'; 
+}
+
+.galerie-gestionLivres input,label,textarea,select{
+    width: 300px;
+    height: 30px;
+    border-radius: 50px;
+    border:0px;
+    margin: 10px;
+    text-align: center;  
+    font-family: 'Kalam-Regular'; 
+}
+
+.gestion-modification{
+    background-color: rgb(201, 163, 137);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Kalam-Regular'; 
+    
+}
+
+
+.gestion-modification input, label, textarea, select {
+    width: 300px;
+    height: 30px;
+    color: black;
+    border-radius: 10px;
+    border: 0px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Kalam-Regular'; 
+}
+
+/* Page Gestion Catégorie*/ 
+.gestionCategorie {
+    background-color: rgb(201, 163, 137);
+    border-radius: 15px;
+    padding: 10px;
+    
+    font-family: 'Kalam-Regular';
+    margin-top: 50px; /* Ajout de marge en haut */
+    margin-bottom: 50px; /* Ajout de marge en bas */
+    
+}
+
+/* Page Gestion Emprunts*/ 
+.gestionEmprunts {
+    background-color: rgb(201, 163, 137); 
+    border-radius: 15px; 
+    padding: 10px; 
+    margin: 10px; 
+    font-family: 'Kalam-Regular'; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    text-align: center; 
+}
+
+.emprunts_adherents{
+     background-color: rgb(201, 163, 137); 
+    border-radius: 15px; 
+    padding: 10px; 
+    margin: 10px; 
+    font-family: 'Kalam-Regular'; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    text-align: center; 
+}
+
+/* Page gestion utilisateurs*/ 
+.gestionUtilisateurs {
+    background-color: rgb(201, 163, 137); 
+    border-radius: 15px; 
+    padding: 10px; 
+    margin: 10px; 
+    font-family: 'Kalam-Regular'; 
+    display: flex; /* Utilisation de flexbox */
+    flex-direction: column; /* Disposition en colonne pour empiler les éléments */
+    align-items: center; /* Centrer les éléments horizontalement */
+}
+
+.gestionUtilisateurs h2 {
+    margin-top: 0; /* Supprime la marge supérieure par défaut */
+}
+
+/* Zone réservation */
+.bloc-reservation{
+    display: flex;
+    justify-content: center;
+}
+
+.bloc-reservation-recherche{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 163, 137);
+    border-radius: 50px;
+    margin: 20px;
+    height: 650px;
+    width: 600px;  
+}
+
+.bloc-reservation-recherche input{
+    margin : 5px;
+}
+
+
+.bloc-reservation-recherche-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    overflow: auto;
+    max-height: 450px; 
+}
+
+.bloc-reservation-biblio{
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    margin-top: 20px;
+    
+    
+}
+.bloc-reservation-biblio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto; /* Défilement vertical */
+    max-height: 450px; /* Hauteur maximale du conteneur */
+}
+
+.error-message {
+    background-color: #ffcccc;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+        
+
+        
+/* Zone de recherche */
+.text-recherche{
+    width: 90%;
+    border-radius: 15px;
+    border: 0px;
+    margin-top: 20px;
+    font-family: 'Kalam-Regular'; 
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    
+}
+
+
+.bloc-reservation-biblio-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-height: 600px;
+    background-color: rgb(201, 163, 137);
+    border-radius: 50px;
+    padding-bottom: 103px;
+    height: 478px;
+    width: 600px;
+}
+
+
+#bouton-filtre{
+    width: 90%;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 30px;
+    font-family: 'Kalam-Regular'; 
+    font-size: 18px;
+    background-color: white;
+    text-align: center;
+}
+
+#text-ma-biblio{
+    background-color: rgb(201, 163, 137);
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.grid-item img{
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.message-traitement {
+    background-color: #f2f2f2;
+    text-color: green; 
+}
+/*Page infos-livres */
+
+.infos-livre{
+    display: flex;
+    background-color: rgb(201, 163, 137);
+    max-height: 600px;
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    overflow:auto;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin:20px;
+}
+
+.infos-livre img{
+    height: 300px;
+    border-radius: 25px;
+}
+
+#bloc-info-livre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;   
+}
+
+hr{
+    color: rgb(0, 0, 1);  
+}
+
+/* Style pour la page de connexion */
+.login-form {
+    background-color: rgb(201, 163, 137);
+    border-radius: 25px;
+    margin: 5%
+}
+
+/*Message de connexion réussie */ 
+.message-connexion {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles spécifiques pour la zone des informations sur le livre */
+
+.infos-livre .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.infos-livre .flex-item {
+    margin-bottom: 10px;
+}
+
+
+.flex-item-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.flex-item-right {
+    flex: 1;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+/* Zone page de conatct*/
+.bloc-contact {
+    max-width: 1000px;
+    margin: 20px auto; /* à ajuster selon hauteur par rapport au header */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+}
+
+.bloc-contact-coordonnees{
+    background-color: rgb(201, 163, 137);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: left;
+    padding: 10px;
+}
+
+.bloc-contact-formulaire{
+    background-color: rgb(201, 163, 137);
+    border-radius: 15px;
+    width: 300px;
+}
+
+.bloc-contact-map iframe {
+    width: 600px;
+    height: 100%; 
+    border-radius: 15px;
+    border: 0px;
+  
+}
+
+
+
+.sous-bloc-contact{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#bouton-mail{
+    margin-bottom: 10px;
+    border-radius: 15px;
+
+}
+
+.galerie{
+    color: white;
+}
+
+
+
+textarea, #email {   
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+    resize: none;
+   
+}
+
+textarea{
+    height: 100px;
+   
+}
+
+/* Bouton retour haut*/
+body .retour-haut {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(201, 163, 137);
+    border-radius: 50px;
+    padding: 0.5rem;
+    text-decoration: none;
+    z-index: 1;
+}
+
+body .retour-haut span {
+    color: black;
+    font-size: 250%;
+}
+
+body .retour-haut:hover {
+    transform: scale(1.05);
+} 
+
+
+/*Inscription.php */
+.register-form {
+    max-width: 400px;
+    margin: auto;
+    background-color: rgb(201, 163, 137); /* Fond de couleur spécifiée uniquement pour le bloc d'inscription */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.register-form button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.register-form p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-form a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/*Zone footer */
+.footer-clean {
+   
+    color: #fff; 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: auto; 
+    padding-top: 0.5%;
+    padding-bottom: 0px;
+    
+   
+}
+
+.footer-clean h3 {
+    margin: 0 0 12px;
+    font-weight: bold;
+    font-size: 18px; 
+    color: #ffcc00;
+}
+
+.footer-clean ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.footer-clean ul a {
+    color: #ffcc00; 
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-clean ul a:hover {
+    opacity: 1;
+}
+
+
+.footer-clean .item {
+    text-align: center;
+}
+
+
+.footer-clean .item.social > a:hover {
+    opacity: 0.9;
+}
+
+.footer-clean .copyright {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+    .footer-clean .item.social > a {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-clean .item.social > a {
+        margin-top: 10px;
+    }
+}
