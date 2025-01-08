@@ -16,7 +16,7 @@ Mon Projet en AP de créer un site pour une bibliothèque associative
 
 ## Scénario de test
 1. Sur la page d'accueil, cliquer sur l'icône 'connexion'.
-2. Se connecter avec l'identifiant 'compteAdmin@email.com' et le mot de passe 'joliverie'.
+2. Se connecter avec l'identifiant 'compteAdmin@email.com' et le mot de passe 'joliverie' si vous êtes adminsitrateur sinon vous pouvez utiliser d'autres utilisateur comme 'alice.smith@email.com' avec son mot de passe disponible dans la base de données. Sinon vous pouvez vous <strong>inscrire</strong>. 
 3. Sur la page 'BackOffice', vous avez accès au Back Office de la bibliothèque pour rajouter/emprunter/modifier les livres.
 4. Pour réserver une nouveau livre, cliquer sur 'Réserver'.
 5. Après l'adminsitrateur doit bien se déconnecter, avec le boutonen haut à droitre.
