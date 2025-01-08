@@ -1,5 +1,5 @@
 # Bibliothèque-Projet-AP
-Mon Projet en AP de créer un site pour une bibliothèque associative. Vous pouvez si vous le souhaitez aller regarder sur mon Portfolio, les images de cette réalisation : <a href="https://anaisprt44.github.io/Portfolio/web.html" target= »_blank ></a>
+Mon Projet en AP de créer un site pour une bibliothèque associative. Vous pouvez si vous le souhaitez aller regarder sur mon Portfolio, les images de cette réalisation : <a href="https://anaisprt44.github.io/Portfolio/web.html" target= »_blank >Lien</a>
 
 ## Prérequis au fonctionnement du projet 
 - **Serveur web** : Apache, Nginx ...
